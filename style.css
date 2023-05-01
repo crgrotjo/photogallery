@@ -1,0 +1,184 @@
+/* css reset */
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/* !reset */
+
+/* setup */
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #000;
+}
+
+body {
+    background-color: #fff;
+    width: 485px;
+    margin: 0 auto;
+}
+
+p {font-size: 1.25em; margin-bottom: 10px;}
+figcaption, label, input, small {font-size: 1em;}
+nav a {font-size: 1.5em;text-transform: uppercase;color: #fff;text-decoration: none;}
+h1 {font-size: 3em; font-weight: bold;text-transform: uppercase; color: #007d7b; text-align: center; margin-bottom: 10px;}
+h2 {font-size: 2em; font-weight: bold; text-transform: uppercase;text-align: center; margin-bottom: 20px;}
+/* !setup */
+nav ul {
+    background-color:#000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0px;
+}
+nav ul li {
+    padding: 10px;
+}
+a[href="#top"] {
+    display: none;
+}
+
+#photogallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+
+}
+figure {
+    position: relative;
+    margin-bottom: 10px;
+}
+figcaption {
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.top{top:10px}
+.bottom{bottom:10px}
+.dark{color:#000}
+.light{color: #fff;}
+
+#contact {
+    background-color: #000;
+    color:#fff ;
+    padding-bottom: 60px;
+}
+#contact legend {
+    display: none;
+}
+#contact div {
+    width: 420px;
+    margin: 0 auto;
+}
+#contact div p,#contact div h2{
+    text-align: center;
+}
+h2 {
+    padding-top: 15px;
+}
+    
+  #contact label {
+    display: block;
+    margin-left: 10px;
+  }
+  
+  ::placeholder {
+    color: #007d7b;
+    text-transform: uppercase;
+  }
+
+  #contact input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  
+  #contact button[type="submit"] {
+    display: block;
+    padding: 10px 100px;
+    background-color: #007d7b;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 0 auto;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  footer {
+    text-align: center;
+    color: #fff;
+    background-color: #000;
+    text-transform: uppercase;
+  }
+
+  /* Media queries */
+/* 880 */
+  @media screen and (min-width: 880px) {
+    body {
+        width: 880px;
+    }
+    section {
+        padding: 0px 5px;
+    }
+    #photogallery {grid-template-columns: 1fr 1fr;}
+    #contact div {width: 660px;}
+    #contact button[type="submit"]{ padding: 10px 150px;}
+  }
+  /* 1300 */
+  @media screen and (min-width: 1300px) {
+    body {
+        width: 1300px;
+    }
+    #photogallery {grid-template-columns: 1fr 1fr 1fr;}
+    #contact div {width: 990px;}
+    #contact button[type="submit"] { padding: 10px 200px;}
+    nav ul {justify-content: end;}
+  }
